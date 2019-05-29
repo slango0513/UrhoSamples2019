@@ -75,5 +75,4 @@ The structure of each solution is this:
 
 # To build the samples
 
-* Windows: Use [Visual Studio 2015](https://www.visualstudio.com/).
-* Mac: Use the latest [Xamarin Studio](https://xamarin.com/studio) 
+* Windows: Use [Visual Studio 2019](https://www.visualstudio.com/).
