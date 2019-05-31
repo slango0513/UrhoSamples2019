@@ -1,21 +1,33 @@
-# UrhoSharp 2019 ÑİÊ¾
+# UrhoSharp 2019 æ¼”ç¤º
 
-UrhoSharp ÊÇ¸öÓÅĞãµÄÓÎÏ·ÒıÇæ£¬µ«¹Ù·½µÄÑİÊ¾Èç½ñÒª¸ÄºÜ¶à¶«Î÷²ÅÄÜÔËĞĞ£¬ÎªÁËÈÃ´ó¼ÒÊ¡Á¦£¬±¾ß÷·­ĞÂÁËÑİÊ¾Àï×îÖØÒªµÄ²¿·Ö¡£
+UrhoSharp æ˜¯ä¸ªä¼˜ç§€çš„æ¸¸æˆå¼•æ“ï¼Œä½†å®˜æ–¹çš„æ¼”ç¤ºå¦‚ä»Šè¦æ”¹å¾ˆå¤šä¸œè¥¿æ‰èƒ½è¿è¡Œï¼Œä¸ºäº†è®©å¤§å®¶çœåŠ›ï¼Œæœ¬å–µç¿»æ–°äº†æ¼”ç¤ºé‡Œæœ€é‡è¦çš„éƒ¨åˆ†ã€‚
 
-## ÔËĞĞÖ¸ÄÏ
+## è¿è¡ŒæŒ‡å—
 
-* °²×° Visual Studio 2019¡£
+* å®‰è£… Visual Studio 2019ã€‚
 
-### ×ÀÃæ
+### æ¡Œé¢
 
-* Í¨¹ı Installer °²×°Ä¬ÈÏ¹¤×÷¸ºÔØ£º.NET Core ¿çÆ½Ì¨¿ª·¢¡£
-* ÔÚÎÄ¼ş¼Ğ SamplyGame\SamplyGame.Desktop ÏÂÖ´ĞĞ dotnet run ÍæÓÎÏ·¡£
-* ÔÚÎÄ¼ş¼Ğ FeatureSamples\Urho.Samples.Desktop ÏÂÖ´ĞĞ dotnet run ÔËĞĞ¹¦ÄÜÕ¹Ê¾£¬ÊäÈëÊı×ÖÈç 19¡£
+* é€šè¿‡ Installer å®‰è£…é»˜è®¤å·¥ä½œè´Ÿè½½ï¼š.NET Core è·¨å¹³å°å¼€å‘ã€‚
+* åœ¨æ–‡ä»¶å¤¹ SamplyGame\SamplyGame.Desktop ä¸‹æ‰§è¡Œ dotnet run ç©æ¸¸æˆã€‚
+* åœ¨æ–‡ä»¶å¤¹ FeatureSamples\Urho.Samples.Desktop ä¸‹æ‰§è¡Œ dotnet run è¿è¡ŒåŠŸèƒ½å±•ç¤ºï¼Œè¾“å…¥æ•°å­—å¦‚ 19ã€‚
 
-### ÒÆ¶¯
+### ç§»åŠ¨
 
-* Í¨¹ı Installer °²×°Ä¬ÈÏ¹¤×÷¸ºÔØ£ºÊ¹ÓÃ .NET µÄÒÆ¶¯¿ª·¢¡¢Í¨ÓÃ Windows Æ½Ì¨¿ª·¢¡£
-* ´ò¿ª UrhoSamples2019.sln£¬±àÒë SamplyGame\SamplyGame.Droid£¬Á¬½Ó°²×¿Éè±¸ºó²¿Êğ¡¢ÔËĞĞ¡£
+* é€šè¿‡ Installer å®‰è£…é»˜è®¤å·¥ä½œè´Ÿè½½ï¼šä½¿ç”¨ .NET çš„ç§»åŠ¨å¼€å‘ã€é€šç”¨ Windows å¹³å°å¼€å‘ã€‚
+* æ‰“å¼€ UrhoSamples2019.slnï¼Œç¼–è¯‘ SamplyGame\SamplyGame.Droidï¼Œè¿æ¥å®‰å“è®¾å¤‡åéƒ¨ç½²ã€è¿è¡Œã€‚
+
+## é“¾æ¥
+
+UrhoSharp (Xamarin) å®˜ç½‘ï¼šhttps://docs.microsoft.com/zh-cn/xamarin/graphics-games/urhosharp/
+
+Urho3D å®˜ç½‘ï¼šhttps://urho3d.github.io/
+
+Urho3D ç¼–è¾‘å™¨ï¼šhttps://sourceforge.net/projects/urho3d/files/Urho3D/
+
+UrhoSharp æºç ï¼šhttps://github.com/xamarin/urho
+
+Urho3D æºç ï¼šhttps://github.com/urho3d/Urho3D
 
 # UrhoSharp samples
 
