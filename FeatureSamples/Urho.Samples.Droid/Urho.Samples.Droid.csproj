@@ -110,7 +110,7 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\Urho.Samples.csproj">
+    <ProjectReference Include="..\Urho.Samples\Urho.Samples.csproj">
       <Project>{fb02bfdc-7b46-436f-8d45-a89ea5faca27}</Project>
       <Name>Urho.Samples</Name>
     </ProjectReference>

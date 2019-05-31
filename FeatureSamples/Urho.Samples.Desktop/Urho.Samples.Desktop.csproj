@@ -6,7 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="..\Assets\**\*.*">
+    <Content Include="..\Assets\Data\**\*.*">
+      <Link>Data\%(RecursiveDir)%(Filename)%(Extension)</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -16,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Core\Urho.Samples.csproj" />
+    <ProjectReference Include="..\Urho.Samples\Urho.Samples.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,3 +1,22 @@
+# UrhoSharp 2019 演示
+
+UrhoSharp 是个优秀的游戏引擎，但官方的演示如今要改很多东西才能运行，为了让大家省力，本喵翻新了演示里最重要的部分。
+
+## 运行指南
+
+* 安装 Visual Studio 2019。
+
+### 桌面
+
+* 通过 Installer 安装默认工作负载：.NET Core 跨平台开发。
+* 在文件夹 SamplyGame\SamplyGame.Desktop 下执行 dotnet run 玩游戏。
+* 在文件夹 FeatureSamples\Urho.Samples.Desktop 下执行 dotnet run 运行功能展示，输入数字如 19。
+
+### 移动
+
+* 通过 Installer 安装默认工作负载：使用 .NET 的移动开发、通用 Windows 平台开发。
+* 打开 UrhoSamples2019.sln，编译 SamplyGame\SamplyGame.Droid，连接安卓设备后部署、运行。
+
 # UrhoSharp samples
 
 This directory contains various samples for the [UrhoSharp](http://developer.xamarin.com/guides/cross-platform/urho/) 

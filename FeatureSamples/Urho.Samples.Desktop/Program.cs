@@ -10,10 +10,25 @@ namespace Urho.Samples.Desktop
         [DllImport("kernel32.dll")]
         static extern IntPtr LoadLibrary(string dllToLoad);
 
+        static void LoadMonoUrho(string rootFolder, bool isD3D)
+        {
+            if (Environment.OSVersion.Platform == PlatformID.MacOSX || Environment.OSVersion.Platform == PlatformID.Unix)
+            {
+                return; //on macOS/Linux the libs are fat and there is no DirectX
+            }
+            var relativePathToLib = Path.Combine($@"Win{(IntPtr.Size == 8 ? "64" : "32")}_{(isD3D ? "DirectX" : "OpenGL")}", $"mono-urho.dll");
+            Console.WriteLine($"Loaded library: {relativePathToLib}");
+            var file = Path.Combine(rootFolder, relativePathToLib);
+            _ = LoadLibrary(file);
+        }
+
         static Type[] samples;
 
         static void Main(string[] args)
         {
+            var rootFolder = Path.GetDirectoryName(typeof(Program).Assembly.Location);
+            LoadMonoUrho(rootFolder, true);
+
             FindAvailableSamplesAndPrint();
             Type selectedSampleType = null;
 
@@ -35,14 +50,12 @@ namespace Urho.Samples.Desktop
                 selectedSampleType = typeof(Water);
             }
 
-            var assmLocation = Path.GetDirectoryName(typeof(Program).Assembly.Location);
-            var monoUrhoPath = Path.Combine(assmLocation, "Win64_OpenGL", "mono-urho.dll");
-            _ = LoadLibrary(monoUrhoPath);
-
             var options = new ApplicationOptions()
             {
-                ResourcePrefixPaths = new[] { assmLocation },
-                ResourcePaths = new[] { "Data" }
+                ResourcePrefixPaths = new[] { rootFolder },
+                ResourcePaths = new[] { "Data" },
+                Width = 1280,
+                Height = 720
             };
             var game = (Application)Activator.CreateInstance(selectedSampleType, options);
             var exitCode = game.Run();
@@ -52,8 +65,7 @@ namespace Urho.Samples.Desktop
 
         static Type ParseSampleFromNumber(string input)
         {
-            int number;
-            if (!int.TryParse(input, out number))
+            if (!int.TryParse(input, out int number))
             {
                 WriteLine("Invalid format.", ConsoleColor.Red);
                 return null;
@@ -86,6 +98,5 @@ namespace Urho.Samples.Desktop
             Console.WriteLine(text);
             Console.ForegroundColor = color;
         }
-
     }
 }
