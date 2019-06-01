@@ -22,10 +22,18 @@ UrhoSharp 是个优秀的开源游戏引擎，但官方的演示如今要改很�
 
 * 安装 [.NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0)。
 * 打开 UrhoSamples2019.sln（如果 .NET Core 3.0 SDK 是预览版，定位到工具，选项，环境，预览功能，勾选“使用 .NET Core SDK 的预览”），编译 UrhoAssetImporter\UrhoSharp.Viewer.Wpf。
-* 运行 bin 目录下的 UrhoSharp.Viewer.Wpf.exe，定位到 UrhoAssetImporter\SampleData，选择 MainScene.xml。鼠标左右键、WASD控制视图。
+
+#### 使用 Wpf 编辑器
+
+* 运行 bin 目录下的 UrhoSharp.Viewer.Wpf.exe，定位到 UrhoAssetImporter\SampleData，选择 MainScene.xml。
+* 鼠标左右键、WASD 控制视图，Q、E 开关控制台、信息。
 * 找到名为 Cube 的节点，将 Position 由“0 0.5 0”改为“0 3 0”。
 * 选择 Materials\Skybox.xml，将 diffuse 由“Textures/Skybox.xml”改为“Textures/Skybox2.xml”。
 * 重新选择 MainScene.xml 预览改动。
+
+#### 使用原生编辑器
+
+* 下载 Urho3D 编辑器（链接见下方），运行 bin\Editor.bat，File - Open Scene (Ctrl + O)，打开 (repo)/UrhoAssetImporter/SampleData/MainScene.xml。
 
 ## 链接
 
