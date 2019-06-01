@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <PackageReference Include="UrhoSharp" Version="1.9.67" />
-    <PackageReference Include="UrhoSharp.Wpf" Version="1uu.9.67" />
+    <PackageReference Include="UrhoSharp.Wpf" Version="1.9.67" />
   </ItemGroup>
 
   <ItemGroup>

@@ -4,7 +4,7 @@ UrhoSharp 是个优秀的开源游戏引擎，但官方的演示如今要改很�
 
 ## 运行指南
 
-* 安装 Visual Studio 2019。
+* 安装 [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)。
 
 ### 桌面
 
@@ -15,13 +15,13 @@ UrhoSharp 是个优秀的开源游戏引擎，但官方的演示如今要改很�
 ### 移动
 
 * 通过 Installer 安装默认工作负载：使用 .NET 的移动开发、通用 Windows 平台开发。
-* 打开 UrhoSamples2019.sln，编译 SamplyGame\SamplyGame.Droid，连接安卓设备后部署、运行。
-* FeatureSamples\Urho.Samples.Droid 同上。
+* 打开 SamplyGame\SamplyGame.sln，编译 SamplyGame.Droid，连接安卓设备后部署、运行。
+* 打开 FeatureSamples\FeatureSamples.sln，编译 FeatureSamples.Droid，同上。
 
 ### 可视化
 
 * 安装 [.NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0)。
-* 打开 UrhoSamples2019.sln（如果 .NET Core 3.0 SDK 是预览版，定位到工具，选项，环境，预览功能，勾选“使用 .NET Core SDK 的预览”），编译 UrhoAssetImporter\UrhoSharp.Viewer.Wpf。
+* 打开 UrhoAssetImporter\UrhoAssetImporter.sln（如果 .NET Core 3.0 SDK 是预览版，定位到工具，选项，环境，预览功能，勾选“使用 .NET Core SDK 的预览”），编译 UrhoSharp.Viewer.Wpf。
 
 #### 使用 Wpf 编辑器
 
@@ -33,7 +33,7 @@ UrhoSharp 是个优秀的开源游戏引擎，但官方的演示如今要改很�
 
 #### 使用原生编辑器
 
-* 下载 Urho3D 编辑器（链接见下方），运行 bin\Editor.bat，File - Open Scene (Ctrl + O)，打开 (repo)/UrhoAssetImporter/SampleData/MainScene.xml。
+* 下载 Urho3D 编辑器（链接见下方），运行 bin\Editor.bat，File - Open Scene (Ctrl + O)，打开 /UrhoAssetImporter/SampleData/MainScene.xml。
 
 ## 链接
 
