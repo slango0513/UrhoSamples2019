@@ -116,3 +116,16 @@ The structure of each solution is this:
 # To build the samples
 
 * Windows: Use [Visual Studio 2019](https://www.visualstudio.com/).
+
+## UrhoAssetImporter - a simple UrhoSharp assets viewer + AssetImporter
+
+Supported formats:
+- .obj, .dae, .fbx, .blend, .3ds, .lwo, [etc](http://assimp.sourceforge.net/main_features_formats.html). 
+- Urho3D Materials, Particles, Prefabs, Models, etc
+
+Supported platforms:
+- Windows (WPF)
+
+![Screenshot](UrhoAssetImporter/Screenshots/Screenshot2.png)
+  
+![Screenshot](UrhoAssetImporter/Screenshots/wpf.gif)
