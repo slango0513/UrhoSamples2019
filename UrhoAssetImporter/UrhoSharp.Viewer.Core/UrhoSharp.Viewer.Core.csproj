@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <!--<ItemGroup>
+    <Content Include="..\ViewerAssets\**\*.*">
+      <Link>ViewerAssets\%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>-->
+
+  <ItemGroup>
+    <PackageReference Include="UrhoSharp" Version="1.9.67" />
+    <PackageReference Include="UrhoSharp.Tools" Version="1.8.93" />
+  </ItemGroup>
+
+</Project>

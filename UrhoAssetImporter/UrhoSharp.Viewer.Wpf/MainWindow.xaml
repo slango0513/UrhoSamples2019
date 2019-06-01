@@ -1,0 +1,81 @@
+﻿<Window x:Class="UrhoSharp.Viewer.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UrhoSharp.Viewer.Wpf"
+        mc:Ignorable="d" Background="AliceBlue"
+        Title="UrhoSharp Viewer" Height="900" Width="1600">
+    <Window.Resources>
+        <local:ItemIconConverter x:Key="ItemIconConverter"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <ToolBar Grid.ColumnSpan="99">
+            <ToolBar.Items>
+                <Button Content="Export to .csproj" IsEnabled="False" />
+                <!--not implemented yet-->
+            </ToolBar.Items>
+        </ToolBar>
+        <TextBox Grid.Row="1" x:Name="RootFolderPath" BorderBrush="LightGray" Margin="6,6,0,6" FontSize="14" Text="C:\Projects\urho\Samples\FeatureSamples\Assets" TextChanged="OnRootFolderChanged" />
+        <Button Grid.Row="1" Grid.Column="1" Content="Browse" Background="LightGray" BorderThickness="0" Click="OnBrowseClick" Width="65" Margin="6" Height="26"/>
+        <Grid Grid.Row="2" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" MinWidth="100"/>
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="5*" MinWidth="100"/>
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition x:Name="RawEditorColumn" Width="4*" MinWidth="100"/>
+            </Grid.ColumnDefinitions>
+            <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" Background="#EEF5FD" />
+            <GridSplitter Grid.Column="3" Width="5" HorizontalAlignment="Stretch" Background="#EEF5FD" />
+            <WindowsFormsHost Grid.Column="2" x:Name="WindowsFormsHost" Margin="3,3,3,16" Background="Gray"/>
+            <TextBlock Grid.Column="2" Grid.ColumnSpan="3" FontSize="14" VerticalAlignment="Bottom" Margin="2,0,0,2">
+				<TextBlock Text="Working directory: " Foreground="Gray"/>
+				<Hyperlink Click="Hyperlink_Click">
+					<TextBlock Text="{Binding WorkingDirectory}"/>
+				</Hyperlink>
+			</TextBlock>
+            <avalonedit:TextEditor x:Name="RawEditor" BorderBrush="LightGray" BorderThickness="2" Grid.Column="4" FontFamily="Consolas" SyntaxHighlighting="Xml" TextChanged="RawEditor_TextChanged" />
+            <TextBlock x:Name="ScaleLabel" Grid.Column="4" VerticalAlignment="Top" HorizontalAlignment="Right" Text="" Margin="4,4,30,4" FontSize="14" />
+
+            <Grid x:Name="LoadingPanel" Grid.Column="2" Margin="3">
+                <TextBlock x:Name="LoadingStatus" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Text=""/>
+            </Grid>
+            <TreeView x:Name="SolutionExplorerTree" Margin="6,0,0,6"
+					  SelectedItemChanged="SolutionExplorerTree_SelectedItemChanged"
+					  ItemsSource="{Binding SolutionItems}"
+					  BorderBrush="LightGray"
+					  ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate ItemsSource="{Binding Children}">
+                        <StackPanel Orientation="Horizontal" Margin="4">
+                            <Image Source="{Binding Path, Converter={StaticResource ItemIconConverter}}"/>
+                            <TextBlock x:Name="Name" Margin="5,0,0,0" Text="{Binding Name}"/>
+                        </StackPanel>
+                        <HierarchicalDataTemplate.Triggers>
+                            <DataTrigger Binding="{Binding IsFolder}" Value="True">
+                                <!--<Setter TargetName="Name" Property="Foreground" Value="#9C6219"/>-->
+                                <!--<Setter TargetName="Name" Property="FontWeight" Value="Bold"/>-->
+                            </DataTrigger>
+                        </HierarchicalDataTemplate.Triggers>
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
+                <TreeView.ItemContainerStyle>
+                    <Style TargetType="{x:Type TreeViewItem}">
+                        <Setter Property="IsExpanded" Value="False" />
+                    </Style>
+                </TreeView.ItemContainerStyle>
+            </TreeView>
+        </Grid>
+    </Grid>
+</Window>

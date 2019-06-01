@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<scene id="1">
+	<attribute name="Name" value="SampleScene" />
+	<attribute name="Time Scale" value="1" />
+	<attribute name="Smoothing Constant" value="50" />
+	<attribute name="Snap Threshold" value="5" />
+	<attribute name="Elapsed Time" value="0.76158" />
+	<attribute name="Next Replicated Node ID" value="3" />
+	<attribute name="Next Replicated Component ID" value="6" />
+	<attribute name="Next Local Node ID" value="16777286" />
+	<attribute name="Next Local Component ID" value="16777378" />
+	<attribute name="Variables" />
+	<attribute name="Variable Names" value="" />
+	<component type="Octree" id="1" />
+	<component type="DebugRenderer" id="2" />
+	<component type="Zone" id="3">
+		<attribute name="Ambient Color" value="1 1 1 1" />
+	</component>
+	<node id="16777279">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Cube" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 0.5 0" />
+		<attribute name="Rotation" value="0.965926 0 0.258819 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="16777305">
+			<attribute name="Model" value="Model;Models/Box.mdl" />
+			<attribute name="Material" value="Material;Materials/Stone.xml" />
+		</component>
+	</node>
+	<node id="16777217">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Light" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="Light" id="16777228">
+			<attribute name="Light Type" value="Directional" />
+		</component>
+	</node>
+	<node id="16777219">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Ground" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="64 0.5 64" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="16777229">
+			<attribute name="Model" value="Model;Models/Plane.mdl" />
+			<attribute name="Material" value="Material;Materials/Terrain.xml" />
+		</component>
+	</node>
+	<node id="2">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Sky" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="Skybox" id="5">
+			<attribute name="Model" value="Model;Models/Box.mdl" />
+			<attribute name="Material" value="Material;Materials/Skybox.xml" />
+		</component>
+	</node>
+	<node id="16777278">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Camera" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 8 -16" />
+		<attribute name="Rotation" value="0.965926 0.258819 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="Camera" id="16777304">
+			<attribute name="Aspect Ratio" value="1.78218" />
+		</component>
+	</node>
+</scene>
