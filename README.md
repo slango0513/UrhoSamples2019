@@ -16,6 +16,7 @@ UrhoSharp 是个优秀的开源游戏引擎，但官方的演示如今要改很�
 
 * 通过 Installer 安装默认工作负载：使用 .NET 的移动开发、通用 Windows 平台开发。
 * 打开 UrhoSamples2019.sln，编译 SamplyGame\SamplyGame.Droid，连接安卓设备后部署、运行。
+* FeatureSamples\Urho.Samples.Droid 同上。
 
 ### 可视化
 
@@ -113,10 +114,6 @@ The structure of each solution is this:
 
 * `WinForms`: Contains the Windows launcher based on WinForms.
 
-# To build the samples
-
-* Windows: Use [Visual Studio 2019](https://www.visualstudio.com/).
-
 ## UrhoAssetImporter - a simple UrhoSharp assets viewer + AssetImporter
 
 Supported formats:
@@ -129,3 +126,7 @@ Supported platforms:
 ![Screenshot](UrhoAssetImporter/Screenshots/Screenshot2.png)
   
 ![Screenshot](UrhoAssetImporter/Screenshots/wpf.gif)
+
+# To build the samples
+
+* Windows: Use [Visual Studio 2019](https://www.visualstudio.com/).
