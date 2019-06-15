@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
@@ -8,7 +9,8 @@ using System.Linq;
 
 namespace Urho.Samples.Droid
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true,
+        ScreenOrientation = ScreenOrientation.Landscape)]
     public class MainActivity : ListActivity
     {
         Type[] sampleTypes;

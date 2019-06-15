@@ -1,7 +1,6 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Urho;
@@ -12,7 +11,7 @@ namespace SamplyGame.Droid
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true,
         ConfigurationChanges = ConfigChanges.KeyboardHidden | ConfigChanges.Orientation,
         ScreenOrientation = ScreenOrientation.Portrait)]
-    public class MainActivity : AppCompatActivity
+    public class MainActivity : Activity
     {
         protected override async void OnCreate(Bundle savedInstanceState)
         {
