@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
 using Urho;
@@ -34,6 +35,11 @@ namespace SamplyGame.Desktop
                 Width = 720,
                 Height = 1280
             };
+            if (Debugger.IsAttached && Environment.OSVersion.Platform == PlatformID.Win32NT)
+            {
+                options.NoSound = true;
+                Debug.WriteLine("WARNING! Sound is disabled on Windows when debugger is attached (temporarily).");
+            }
             new SamplyGame(options).Run();
         }
     }

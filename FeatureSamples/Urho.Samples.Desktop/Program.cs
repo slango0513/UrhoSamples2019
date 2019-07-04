@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -57,6 +58,11 @@ namespace Urho.Samples.Desktop
                 Width = 1280,
                 Height = 720
             };
+            if (Debugger.IsAttached && Environment.OSVersion.Platform == PlatformID.Win32NT)
+            {
+                options.NoSound = true;
+                Debug.WriteLine("WARNING! Sound is disabled on Windows when debugger is attached (temporarily).");
+            }
             var game = (Application)Activator.CreateInstance(selectedSampleType, options);
             var exitCode = game.Run();
             WriteLine($"Exit code: {exitCode}. Press any key to exit...", ConsoleColor.DarkYellow);

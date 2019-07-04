@@ -67,6 +67,11 @@ namespace Urho.Samples.WPF
                 ResourcePrefixPaths = new[] { rootFolder },
                 ResourcePaths = new[] { "Data" }
             };
+            if (Debugger.IsAttached && Environment.OSVersion.Platform == PlatformID.Win32NT)
+            {
+                options.NoSound = true;
+                Debug.WriteLine("WARNING! Sound is disabled on Windows when debugger is attached (temporarily).");
+            }
             var app = await UrhoSurfaceCtrl.Show(value.Type, options);
             Application.InvokeOnMain(() => { /*app.DoSomeStuff();*/});
         }
