@@ -81,7 +81,7 @@
     <PackageReference Include="UrhoSharp">
       <Version>1.9.67</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
@@ -127,9 +127,7 @@
       <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\SamplyGame\SamplyGame.csproj">
       <Project>{196099fa-1be0-46ae-b0a9-38bcb339dcc0}</Project>

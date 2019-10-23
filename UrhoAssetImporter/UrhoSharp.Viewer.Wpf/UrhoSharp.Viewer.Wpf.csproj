@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AvalonEdit" Version="6.0.0-netcore3p4alpha1" />
+    <PackageReference Include="AvalonEdit" Version="6.0.0" />
     <PackageReference Include="UrhoSharp" Version="1.9.67" />
   </ItemGroup>
 

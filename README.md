@@ -21,7 +21,7 @@ UrhoSharp 是个优秀的开源游戏引擎，但官方的演示如今要改很�
 ### 可视化
 
 * 安装 [.NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0)。
-* 打开 UrhoAssetImporter\UrhoAssetImporter.sln（如果 .NET Core 3.0 SDK 是预览版，定位到工具，选项，环境，预览功能，勾选“使用 .NET Core SDK 的预览”），编译 UrhoSharp.Viewer.Wpf。
+* 打开 UrhoAssetImporter\UrhoAssetImporter.sln，编译 UrhoSharp.Viewer.Wpf。
 
 #### 使用 Wpf 编辑器
 
